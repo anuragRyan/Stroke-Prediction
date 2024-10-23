@@ -9,39 +9,30 @@ The dataset includes various features such as demographic information, health co
 ## 1. Features:
 
     • Numerical: age, avg_glucose_level, bmi
-    • Categorical: gender, hypertension, heart_disease, ever_married, work_type, Residenc
-    e_type, smoking_status, stroke
+    • Categorical: gender, hypertension, heart_disease, ever_married, work_type, Residence_type, smoking_status, stroke
 
 ## 2. Data Preprocessing:
 
     * Several preprocessing steps were performed:
 
-    • Handling Missing Values: The bmi column had missing values, which were imputed
-    with the median value.
+    • Handling Missing Values: The bmi column had missing values, which were imputedwith the median value.
     • Removing Duplicates: The duplicate records were removed to ensure data integrity.
-    • Outlier Transformation: bmi and avg_glucose_level were transformed using log
-    normalization (log(x+1)) to handle skewness and normalize the distributions.
+    • Outlier Transformation: bmi and avg_glucose_level were transformed using log normalization (log(x+1)) to handle skewness and normalize the distributions.
 
 ## 3. Exploratory Data Analysis and Visualization
 
     * Numerical Feature Visualization:
 
-    • Kernel Density Estimate (KDE) and Box Plots were used to visualize the
-    distributions and outliers of numerical features (age, bmi, avg_glucose_level),
-    comparing stroke and non-stroke groups.
-    • Scatter Plots were drawn to assess the relationship between these numerical
-    features and the target variable stroke.
+    • Kernel Density Estimate (KDE) and Box Plots were used to visualize the distributions and outliers of numerical features (age, bmi avg_glucose_level), comparing stroke and non-stroke groups.
+    • Scatter Plots were drawn to assess the relationship between these numerical features and the target variable stroke.
 
     * Categorical Feature Visualization:
 
-    • Count Plots for categorical variables like gender hypertension, heart_disease,
-    ever_married, work_type and smoking_status were generated to understand the distribution of the data and how these factors influence the occurrence of strokes.
+    • Count Plots for categorical variables like gender hypertension, heart_disease, ever_married, work_type and smoking_status were generated to understand the distribution of the data and how these factors influence the occurrence of strokes.
 
     * Target Distribution:
 
-    • A Pie Chart was used to illustrate the imbalanced nature of the dataset, with a
-    significant majority of the samples belonging to the stroke=0 class (people who did not have a stroke).
-
+    • A Pie Chart was used to illustrate the imbalanced nature of the dataset, with a significant majority of the samples belonging to the stroke=0 class (people who did not have a stroke).
 
 ## 4. Data Encoding and Scaling:
 
@@ -62,10 +53,8 @@ The dataset includes various features such as demographic information, health co
 
     * After applying SMOTE:
 
-    • Class Distribution: A bar plot was used to visualize the distribution of the stroke class
-    before and after applying SMOTE, showing a more balanced dataset.
-    Modeling on Resampled Data
-    With the balanced dataset, two models were trained: Decision Tree and K-Nearest Neighbors (KNN).
+    • Class Distribution: A bar plot was used to visualize the distribution of the stroke class before and after applying SMOTE, showing a more balanced dataset.
+    Modeling on Resampled Data with the balanced dataset, two models were trained: Decision Tree and K-Nearest Neighbors (KNN).
 
     * Decision Tree Classifier (After SMOTE)
     The Decision Tree was retrained on the resampled data. Key results:
